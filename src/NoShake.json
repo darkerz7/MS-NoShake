@@ -1,0 +1,10 @@
+{
+	"NoShake.Enabled": {
+		"en-us": "has been {{green}}Enabled",
+		"ru-ru": "был {{green}}Включен"
+	},
+	"NoShake.Disabled": {
+		"en-us": "has been {{red}}Disabled",
+		"ru-ru": "был {{red}}Отключен"
+	}
+}
