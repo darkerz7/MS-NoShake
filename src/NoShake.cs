@@ -112,8 +112,8 @@ namespace MS_NoShake
             }
             if (client.GetPlayerController() is { } player && GetLocalizer() is { } lm)
             {
-                var localizer = lm.GetLocalizer(client);
-                player.Print(command.ChatTrigger ? HudPrintChannel.Chat : HudPrintChannel.Console, $" {ChatColor.Blue}[{ChatColor.Green}Noshake{ChatColor.Blue}]{ChatColor.White} {ReplaceColorTags(g_bNoShake[client.Slot] ? localizer.Format("NoShake.Enabled") : localizer.Format("NoShake.Disabled"))}");
+                var localizer = lm.For(client);
+                player.Print(command.ChatTrigger ? HudPrintChannel.Chat : HudPrintChannel.Console, $" {ChatColor.Blue}[{ChatColor.Green}Noshake{ChatColor.Blue}]{ChatColor.White} {ReplaceColorTags(g_bNoShake[client.Slot] ? localizer.Text("NoShake.Enabled") : localizer.Text("NoShake.Disabled"))}");
             }
             return ECommandAction.Stopped;
         }
